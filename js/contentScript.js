@@ -8,7 +8,7 @@ function loadSidebarHtml(callback) {
   }
 
   const xhr = new XMLHttpRequest();
-  xhr.open("GET", chrome.runtime.getURL("sidebar.html"), true);
+  xhr.open("GET", chrome.runtime.getURL("../sidebar.html"), true);
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
       callback(xhr.responseText);

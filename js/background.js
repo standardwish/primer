@@ -1,7 +1,7 @@
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: "scrapText",
-    title: "Scrap this text",
+    title: "해당 사업을 추가하기",
     contexts: ["selection"],
   });
 });
@@ -11,7 +11,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     chrome.scripting.executeScript(
       {
         target: { tabId: tab.id },
-        files: ["contentScript.js"],
+        files: ["js/contentScript.js"],
       },
       () => {
         console.log(info);
