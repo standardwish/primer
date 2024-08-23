@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.content {
+  padding: 20px;
+  flex: 1;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -160px;
+  width: 160px;
+  height: 100%;
+  background-color: #f4f4f4;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+#scraped-text {
+  margin: 20px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+#close-btn:hover {
+  background-color: #555;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+}
